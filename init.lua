@@ -1,2 +1,5 @@
-require('options')
-require('keymaps')
+require("options")
+require("keymaps")
+require("lazynvim")
+-- require("colorscheme")
+-- require("treesitter")
