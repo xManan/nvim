@@ -27,7 +27,7 @@ return {
 			keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
 
 			opts.desc = "Show LSP type definitions"
-			keymap.set("n", "gd", "<cmd>Telescope lsp_type_definitions<cr>", opts)
+			keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<cr>", opts)
 
 			opts.desc = "See available code actions"
 			keymap.set({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, opts)
@@ -56,6 +56,18 @@ return {
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
+		local servers = {
+			-- 'clangd',
+			'intelephense'
+		}
+
+		for _, server in ipairs(servers) do
+			require('lspconfig')[server].setup {
+				on_attach = on_attach,
+				capabilities = capabilities,
+			}
+		end
+
 		lspconfig["lua_ls"].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
@@ -72,16 +84,6 @@ return {
 					}
 				}
 			}
-		})
-
-		lspconfig["clangd"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-		})
-
-		lspconfig["intelephense"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
 		})
 	end
 }

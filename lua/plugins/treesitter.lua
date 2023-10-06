@@ -1,11 +1,15 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	config = function () 
+	config = function ()
 		local configs = require("nvim-treesitter.configs")
 
 		configs.setup {
-			ensure_installed = { "c", "lua", "php" },
+			ensure_installed = {
+				-- "c",
+				"lua",
+				"php"
+			},
 			sync_install = false,
 
 			-- Automatically install missing parsers when entering buffer
