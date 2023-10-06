@@ -6,7 +6,7 @@ return {
 
 		configs.setup {
 			ensure_installed = {
-				-- "c",
+				"c",
 				"lua",
 				"php"
 			},

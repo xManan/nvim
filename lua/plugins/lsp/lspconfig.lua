@@ -57,7 +57,7 @@ return {
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		local servers = {
-			-- 'clangd',
+			'clangd',
 			'intelephense'
 		}
 
