@@ -6,8 +6,10 @@ return {
 
 		configs.setup {
 			ensure_installed = {
+				"c",
 				"cpp",
 				"lua",
+				"php"
 			},
 			sync_install = false,
 

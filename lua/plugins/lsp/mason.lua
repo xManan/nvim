@@ -12,6 +12,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"clangd",
+				"intelephense"
 			},
 			automatic_installation = true
 		})
