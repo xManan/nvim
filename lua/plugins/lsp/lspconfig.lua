@@ -58,7 +58,6 @@ return {
 
 		local servers = {
 			'clangd',
-			'intelephense'
 		}
 
 		for _, server in ipairs(servers) do
