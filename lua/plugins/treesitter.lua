@@ -9,7 +9,8 @@ return {
 				"c",
 				"cpp",
 				"lua",
-				"php"
+				"php",
+				"go"
 			},
 			sync_install = false,
 

@@ -12,7 +12,8 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"clangd",
-				"intelephense"
+				"intelephense",
+				"gopls"
 			},
 			automatic_installation = true
 		})
