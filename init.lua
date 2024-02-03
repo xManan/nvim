@@ -4,6 +4,6 @@ else
 	require("options")
 	require("keymaps")
 	require("lazynvim")
-	vim.cmd [[colorscheme catppuccin]]
+	vim.cmd [[colorscheme rose-pine]]
 	require("transparent")
 end
