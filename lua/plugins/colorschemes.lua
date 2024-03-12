@@ -1,7 +1,5 @@
 return {
-	"catppuccin/nvim",
-	"Mofiqul/vscode.nvim",
-	"ellisonleao/gruvbox.nvim",
 	"folke/tokyonight.nvim",
+	"catppuccin/nvim",
 	{ 'rose-pine/neovim', name = 'rose-pine' }
 }

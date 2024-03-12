@@ -1,5 +1,6 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 8
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = false
@@ -11,4 +12,4 @@ vim.opt.colorcolumn = '80'
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.swapfile = false
 vim.opt.undofile = true
--- vim.g.netrw_liststyle = 3
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
