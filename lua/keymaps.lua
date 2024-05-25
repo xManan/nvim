@@ -14,3 +14,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
+
+vim.keymap.set("n", "<leader>vd", ":lua vim.diagnostic.open_float()<cr>")
+
+vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<cr>")

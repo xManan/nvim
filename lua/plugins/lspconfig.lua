@@ -6,7 +6,6 @@ return {
 		"hrsh7th/nvim-cmp",
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip"
-
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
@@ -57,15 +56,17 @@ return {
 			}
 		})
 
+		require("luasnip.loaders.from_vscode").lazy_load()
+
 		-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-		cmp.setup.cmdline(':', {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = cmp.config.sources({
-				{ name = 'path' }
-			}, {
-				{ name = 'cmdline' }
-			})
-		})
+		-- cmp.setup.cmdline(':', {
+		-- 	mapping = cmp.mapping.preset.cmdline(),
+		-- 	sources = cmp.config.sources({
+		-- 		{ name = 'path' }
+		-- 	}, {
+		-- 		{ name = 'cmdline' }
+		-- 	})
+		-- })
 
 		local keymap = vim.keymap
 
@@ -114,6 +115,9 @@ return {
 
 			opts.desc = "Restart LSP"
 			keymap.set("n", "<leader>rs", ":LspRestart<cr>", opts)
+
+			opts.desc = "Find errors"
+			keymap.set("n", "<leader>fe", ":lua vim.diagnostic.setqflist()<cr>", opts)
 		end
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -123,7 +127,10 @@ return {
 			'intelephense',
 			'gopls',
 			'nixd',
-			'templ'
+			'templ',
+			'tsserver',
+			'tailwindcss',
+			'html',
 		}
 
 		for _, server in ipairs(servers) do
