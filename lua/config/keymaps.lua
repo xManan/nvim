@@ -2,6 +2,8 @@ vim.api.nvim_set_keymap('n', '<leader>e', ':Ex<cr>', { noremap = true, silent = 
 vim.api.nvim_set_keymap('n', 'K', ':lua vim.lsp.buf.hover()<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-c>', '<Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ut', ':UndotreeToggle<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>rn', '::lua vim.lsp.buf.rename()<cr>', { noremap = true, silent = true })
 
 -- Telescope
 local builtin = require('telescope.builtin')
