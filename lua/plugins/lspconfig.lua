@@ -3,7 +3,7 @@ return {
     config = function()
         local lspconfig = require("lspconfig")
         
-        local servers = { 'gopls', 'intelephense', 'clangd', 'templ' }
+        local servers = { 'gopls', 'phpactor', 'clangd', 'templ' }
         for _, lsp in ipairs(servers) do
             lspconfig[lsp].setup({
                 on_attach = on_attach,
