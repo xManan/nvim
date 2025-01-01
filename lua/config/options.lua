@@ -7,3 +7,5 @@ vim.opt.expandtab = true
 vim.opt.timeoutlen = 250
 vim.opt.wrap = false
 vim.opt.hlsearch = false
+vim.opt.scrolloff = 8
+vim.opt.colorcolumn = "80"
