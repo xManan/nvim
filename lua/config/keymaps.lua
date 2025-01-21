@@ -6,6 +6,8 @@ vim.api.nvim_set_keymap('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<cr>',
 vim.api.nvim_set_keymap('n', '<leader>vd', ':lua vim.diagnostic.open_float()<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ut', ':UndotreeToggle<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>rn', ':lua vim.lsp.buf.rename()<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>fo', ':lua vim.lsp.buf.format()<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>rs', ':LspRestart<cr>', { noremap = true, silent = true })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
