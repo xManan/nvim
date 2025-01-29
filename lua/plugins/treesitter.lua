@@ -5,7 +5,7 @@ return {
         local configs = require("nvim-treesitter.configs")
 
         configs.setup({
-            ensure_installed = { "php", "go", "c" },
+            ensure_installed = { "php", "go", "c", "typescript", "tsx" },
             sync_install = false,
             highlight = { enable = true },
             indent = { enable = true },  
