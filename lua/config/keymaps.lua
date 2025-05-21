@@ -23,3 +23,11 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fs', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- Harpoon
+vim.keymap.set('n', '<C-e>', ':lua require("harpoon.ui").toggle_quick_menu()<cr>')
+vim.keymap.set('n', '<leader>a', ':lua require("harpoon.mark").add_file()<cr>')
+vim.keymap.set('n', '<C-h>', ':lua require("harpoon.ui").nav_file(1)<cr>')
+vim.keymap.set('n', '<C-j>', ':lua require("harpoon.ui").nav_file(2)<cr>')
+vim.keymap.set('n', '<C-k>', ':lua require("harpoon.ui").nav_file(3)<cr>')
+vim.keymap.set('n', '<C-l>', ':lua require("harpoon.ui").nav_file(4)<cr>')

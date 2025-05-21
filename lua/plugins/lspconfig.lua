@@ -3,7 +3,7 @@ return {
     dependencies = { 'saghen/blink.cmp' },
     config = function()
         local lspconfig = require("lspconfig")
-        local servers = { 'gopls', 'phpactor', 'clangd', 'templ', 'ts_ls' }
+        local servers = { 'gopls', 'phpactor', 'clangd', 'templ', 'ts_ls', 'nixd' }
         for _, lsp in ipairs(servers) do
             lspconfig[lsp].setup({
                 capabilities = require('blink.cmp').get_lsp_capabilities(),
